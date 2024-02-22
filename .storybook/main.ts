@@ -1,7 +1,11 @@
+// ! Copyright (c) 2024, Brandon Ramirez, brr.dev
+
 import type { StorybookConfig } from '@storybook/react-vite';
 
 const config: StorybookConfig = {
-    stories: ['../src/**/*.mdx', '../src/**/*.stories.@(js|jsx|mjs|ts|tsx)'],
+    stories: [
+        '../src/@(atoms|molecules|organisms|providers|templates)/**/*.stories.@(js|jsx|ts|tsx|mdx)',
+    ],
     addons: [
         '@storybook/addon-links',
         '@storybook/addon-essentials',
