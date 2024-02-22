@@ -1,7 +1,7 @@
 {
     "name": "cozy-ui",
     "private": true,
-    "version": "0.0.0",
+    "version": "0.0.1",
     "type": "module",
     "scripts": {
         "dev": "vite",
@@ -22,6 +22,7 @@
         "@storybook/addon-links": "^7.6.17",
         "@storybook/addon-onboarding": "^1.0.11",
         "@storybook/blocks": "^7.6.17",
+        "@storybook/cli": "^7.6.17",
         "@storybook/react": "^7.6.17",
         "@storybook/react-vite": "^7.6.17",
         "@storybook/test": "^7.6.17",
@@ -38,5 +39,6 @@
         "storybook": "^7.6.17",
         "typescript": "^5.2.2",
         "vite": "^5.1.4"
-    }
+    },
+    "packageManager": "yarn@4.1.0"
 }
