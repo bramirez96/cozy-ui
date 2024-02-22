@@ -1,28 +1,7 @@
 // ! Copyright (c) 2024, Brandon Ramirez, brr.dev
 
-import React, { useCallback, useContext, useEffect, useState } from 'react';
-
-export interface DarkModeContextProps {
-    darkMode: boolean;
-    setDarkMode: React.Dispatch<React.SetStateAction<boolean>>;
-    toggleDarkMode: () => void;
-}
-
-export const DarkModeContext = React.createContext<
-    DarkModeContextProps | undefined
->(undefined);
-
-export function useDarkMode(): DarkModeContextProps {
-    const context = useContext(DarkModeContext);
-
-    if (!context) {
-        throw new Error(
-            'useDarkMode hook must be called from within a DarkModeContext.'
-        );
-    }
-
-    return context;
-}
+import React, { useCallback, useEffect, useState } from 'react';
+import { DarkModeContext } from './DarkModeContext';
 
 export function DarkModeProvider({
     children,
