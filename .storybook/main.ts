@@ -4,9 +4,10 @@ import type { StorybookConfig } from '@storybook/react-vite';
 
 const config: StorybookConfig = {
     stories: [
-        '../src/@(atoms|molecules|organisms|providers|templates)/**/*.stories.@(js|jsx|ts|tsx|mdx)',
+        '../src/@(atoms|molecules|organisms|templates)/**/*.stories.@(js|jsx|ts|tsx|mdx)',
     ],
     addons: [
+        'storybook-dark-mode',
         '@storybook/addon-links',
         '@storybook/addon-essentials',
         '@storybook/addon-onboarding',

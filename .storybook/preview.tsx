@@ -2,7 +2,9 @@
 
 import type { Preview } from '@storybook/react';
 import { themes } from '@storybook/theming';
-import { DarkModeProvider, useDarkMode } from '../src/providers';
+import { DarkModeProvider } from '../src/providers';
+import { useDarkMode } from 'storybook-dark-mode';
+import { BrowserRouter } from 'react-router-dom';
 
 const preview: Preview = {
     parameters: {
@@ -28,13 +30,16 @@ const preview: Preview = {
     },
     decorators: [
         function _StorybookDarkModeWrapper(renderStory) {
-            const { darkMode } = useDarkMode();
+            const darkMode = useDarkMode();
 
             return (
                 <DarkModeProvider darkMode={darkMode}>
                     {renderStory()}
                 </DarkModeProvider>
             );
+        },
+        function _StorybookRouterWrapper(renderStory) {
+            return <BrowserRouter>{renderStory()}</BrowserRouter>;
         },
     ],
 };
