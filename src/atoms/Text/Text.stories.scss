@@ -1,0 +1,12 @@
+// ! Copyright (c) 2024, Brandon Ramirez, brr.dev
+
+@import '/src/theme';
+
+// TODO move this logic to the main text component in a smarter manner
+.ui-text {
+    color: $black;
+
+    .ui-dark-mode & {
+        color: $white;
+    }
+}
