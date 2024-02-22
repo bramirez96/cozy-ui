@@ -1,0 +1,20 @@
+{
+    "extends": "stylelint-config-standard-scss",
+    "plugins": ["stylelint-scss"],
+    "rules": {
+        "at-rule-no-unknown": null,
+        "scss/at-rule-no-unknown": true,
+        "comment-no-empty": null,
+        "scss/comment-no-empty": null,
+        "scss/no-global-function-names": null,
+        "color-hex-length": null,
+        "block-no-empty": null,
+        "value-keyword-case": [
+            "lower",
+            {
+                "severity": "warning",
+                "ignoreKeywords": ["Roboto"]
+            }
+        ]
+    }
+}
